@@ -7,12 +7,16 @@
   <style>
     :root {
       --primary: #0f172a;
-      --accent: #0284c7;
+      --accent: #0ea5e9;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #334155;
       --heading: #0f172a;
       --border: #e2e8f0;
+      --brand-dark: #020b12;
+      --brand-cyan: #1ec9ee;
+      --brand-cyan-dark: #0d7fb0;
+      --brand-gold: #f5c66d;
     }
 
     * {
@@ -35,23 +39,46 @@
       padding: 3rem 0;
     }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 2rem;
-      margin-bottom: 2.5rem;
+    .site-header {
+      background: var(--brand-dark);
+      border-radius: 0 0 18px 18px;
+      padding: 1.5rem 1rem 1.25rem;
+      margin: 0 -1.5rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(2, 11, 18, 0.18);
     }
 
-    h1 {
-      font-size: 2rem;
-      color: var(--heading);
-      letter-spacing: -0.02em;
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-    .tagline {
-      color: var(--accent);
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-top: 0.25rem;
+    .brand-mark {
+      width: min(380px, 82vw);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(30, 201, 238, 0.4));
+    }
+
+    .brand-name {
+      margin-top: 0.15rem;
+      line-height: 0.92;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+      color: rgba(245, 250, 255, 0.96);
+      text-transform: uppercase;
+    }
+
+    .brand-name .word {
+      display: block;
+      font-size: clamp(2.25rem, 6vw, 5.2rem);
+    }
+
+    .brand-name .word:last-child {
+      font-size: clamp(1.8rem, 4vw, 3.9rem);
+      letter-spacing: -0.04em;
     }
 
     section {
@@ -60,6 +87,12 @@
       border-radius: 8px;
       padding: 2rem;
       margin-bottom: 1.75rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--heading);
+      letter-spacing: -0.02em;
     }
 
     h2 {
@@ -105,9 +138,57 @@
 <body>
 
   <div class="container">
-    <header>
-      <h1>Synapse Energy</h1>
-      <p class="tagline">Data-Driven Energy & Infrastructure Consulting</p>
+    <header class="site-header">
+      <div class="brand" aria-label="Synapse Strategy logo">
+        <svg class="brand-mark" viewBox="0 0 560 360" role="img" aria-labelledby="brandTitle brandDesc" xmlns="http://www.w3.org/2000/svg">
+          <title id="brandTitle">Synapse Strategy</title>
+          <desc id="brandDesc">A cyan energy-inspired logo with an abstract arrow network</desc>
+          <defs>
+            <linearGradient id="glowStroke" x1="0%" x2="100%" y1="0%" y2="0%">
+              <stop offset="0%" stop-color="#13d7ff"/>
+              <stop offset="50%" stop-color="#49d3f1"/>
+              <stop offset="100%" stop-color="#0ea5e9"/>
+            </linearGradient>
+          </defs>
+
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M164 196c-10-18-18-34-18-48 0-30 28-54 62-54 38 0 70 19 77 58l19 20 14-4 24 28-8 14-23-7-18 21-16-7-14 20-30-13-17 20-30-12-17 20-17-6-20 19-26-19z" stroke="url(#glowStroke)" stroke-width="10" opacity="0.88"/>
+
+            <path d="M208 120l29 34 44-68m-132 27l-15 8 18 36m101-98l-16 38m102-62l35 55" stroke="url(#glowStroke)" stroke-width="10"/>
+
+            <path d="M264 92l42-34 48 52" stroke="url(#glowStroke)" stroke-width="10"/>
+
+            <g fill="url(#glowStroke)" stroke="url(#glowStroke)" stroke-width="5">
+              <path d="M175 149l-22 18 15 3-31 11-6-17 14 1-7-17 37 1z"/>
+              <path d="M188 203l23-24 29 18-17 5 26 25-15 13-11-14-20 18-15-14 10-17z"/>
+              <path d="M319 142l18-32 22 18-2 10 22 28-17 9-17-21-11 18-15-30z"/>
+              <path d="M339 246l29-22 37 31-19 19-17-14-20 17-15-21z"/>
+            </g>
+
+            <g fill="none" stroke="url(#glowStroke)" stroke-width="8">
+              <circle cx="132" cy="160" r="13"/>
+              <circle cx="150" cy="96" r="12"/>
+              <circle cx="215" cy="65" r="11"/>
+              <circle cx="312" cy="62" r="12"/>
+              <circle cx="387" cy="134" r="12"/>
+              <circle cx="401" cy="224" r="12"/>
+              <circle cx="332" cy="282" r="12"/>
+              <circle cx="241" cy="286" r="11"/>
+              <circle cx="175" cy="259" r="11"/>
+              <circle cx="119" cy="220" r="11"/>
+            </g>
+
+            <circle cx="228" cy="160" r="10" fill="#eab308" stroke="#f5d57e" stroke-width="4"/>
+            <circle cx="247" cy="160" r="10" fill="#eab308" stroke="#f5d57e" stroke-width="4"/>
+            <circle cx="237" cy="178" r="8" fill="#0ea5e9" stroke="#bfeefd" stroke-width="4"/>
+          </g>
+        </svg>
+
+        <div class="brand-name" aria-label="Synapse Strategy">
+          <span class="word">SYNAPSE</span>
+          <span class="word">STRATEGY</span>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -115,7 +196,7 @@
       <section id="mission">
         <h2>Our Mission</h2>
         <p>
-          At Synapse Energy, our mission is to empower utilities, policymakers, and organizations to navigate the modern energy transition through objective, technology-forward analysis. By integrating rigorous data modeling with practical policy evaluation, we deliver clear, future-ready solutions designed to improve system reliability, optimize resource planning, and support sustainable infrastructure.
+          At Synapse Energy, our mission is to empower utilities, policymakers, and organizations to navigate the modern energy transition through objective, technology-forward analysis. By integrating technical expertise with strategic insight, we help clients make informed decisions that improve reliability, affordability, and sustainability.
         </p>
       </section>
 
