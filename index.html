@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synapse Strategy | Energy Consulting</title>
+  <title>Synapse Strategy | Consulting</title>
   <style>
     :root {
       --primary: #0f172a;
       --accent: #0284c7;
+      --accent-hover: #0369a1;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #334155;
@@ -44,7 +45,6 @@
       gap: 1.5rem;
     }
 
-    /* Logo styling */
     .brand-logo {
       width: 100px;
       height: auto;
@@ -89,31 +89,55 @@
     }
 
     ul {
-      list-style-position: inside;
-      margin-left: 0.5rem;
+      list-style-position: outside;
+      margin-left: 1.25rem;
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
-    .contact-info a {
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
       color: var(--accent);
       text-decoration: none;
+      word-break: break-all;
     }
 
-    .contact-info a:hover {
+    a:hover {
       text-decoration: underline;
+      color: var(--accent-hover);
+    }
+
+    .app-link-box {
+      margin-bottom: 1.25rem;
+      padding: 0.75rem 1rem;
+      background-color: #f1f5f9;
+      border-radius: 6px;
+      font-size: 0.95rem;
     }
 
     footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 2.5rem;
       text-align: center;
       font-size: 0.875rem;
-      color: #94a3b8;
-      margin-top: 2rem;
+      color: #64748b;
     }
 
-    /* Responsive adjustment for mobile screens */
+    .team-section {
+      margin-bottom: 0.75rem;
+    }
+
+    .team-names {
+      font-weight: 500;
+      color: var(--heading);
+    }
+
     @media (max-width: 550px) {
       header {
         flex-direction: column;
@@ -130,11 +154,10 @@
 
   <div class="container">
     <header>
-      <!-- Place logo image file (e.g. logo.png) in the same directory -->
       <img src="logo.png" alt="Synapse Strategy Logo" class="brand-logo">
       <div class="header-text">
         <h1>Synapse Strategy</h1>
-        <p class="tagline">Data-Driven Technology & Systems Consulting </p>
+        <p class="tagline">Tech-Forward Business & Growth Solutions</p>
       </div>
     </header>
 
@@ -143,30 +166,45 @@
       <section id="mission">
         <h2>Our Mission</h2>
         <p>
-          At Synapse Strategy, our mission is to empower companies, organizations, and leaders to navigate the rapidly-changing  technology-forward analysis. By integrating rigorous data modeling with practical policy evaluation, we deliver clear, future-ready solutions designed to improve system reliability, optimize resource planning, and support sustainable infrastructure.
+          At Synapse Strategy, our mission is to help organizations eliminate workflow friction and unlock scalable digital growth through modern, tech-forward strategy. By bridging gaps across business value chains with custom automation and practical artificial intelligence, we enable companies to turn operational hurdles into automated, high-performing competitive advantages.
         </p>
       </section>
 
-      <!-- Focus Areas -->
-      <section id="services">
-        <h2>What We Do</h2>
+      <!-- Case Study Section -->
+      <section id="case-study">
+        <h2>Case Study: Spotify Value Chain Gap</h2>
+        <div class="app-link-box">
+          <strong>Interactive App:</strong> 
+          <a href="https://udify.app/chat/Pe9WjNFwTXFV11UG" target="_blank" rel="noopener noreferrer">
+            https://udify.app/chat/Pe9WjNFwTXFV11UG
+          </a>
+        </div>
         <ul>
-          <li><strong>Energy Systems Modeling:</strong> Advanced computational forecasting and resource planning.</li>
-          <li><strong>Regulatory & Policy Analysis:</strong> Evaluating the impact of clean energy standards and utility tariffs.</li>
-          <li><strong>Decarbonization Strategy:</strong> Practical pathways for grid modernization and emissions reduction.</li>
+          <li>
+            Spotify's strategy depends on small advertisers buying ads through self-service tools, but they struggle with setup, creative audio, and policy rejections.
+          </li>
+          <li>
+            Our solution, <strong>Spotify Ads Copilot</strong>, is an AI agent built in Dify that turns one plain language sentence into an audience plan, an exact budget schedule, a 30-second audio ad script checked for length, and an independent policy review.
+          </li>
         </ul>
       </section>
 
       <!-- Contact Section -->
       <section id="contact">
         <h2>Get in Touch</h2>
-        <p class="contact-info">
+        <p>
           Interested in learning more about our work? Contact us at <a href="mailto:info@synapsestrategy.com">info@synapsestrategy.com</a>.
         </p>
       </section>
     </main>
 
     <footer>
+      <div class="team-section">
+        <p><strong>Project Team:</strong></p>
+        <p class="team-names">
+          Jane Bazzell, Joseph Campagna, Katie Martin, Brody Saccoccia, Taylor Singerman, and Max Zaransky
+        </p>
+      </div>
       <p>&copy; Synapse Strategy. All rights reserved.</p>
     </footer>
   </div>
